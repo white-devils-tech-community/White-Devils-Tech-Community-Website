@@ -1,73 +1,25 @@
-# Welcome to your Lovable project
+# Welcome to White Devils Tech Community
+White Devils is an independent, student-led tech community built on collaboration, curiosity, and career growth. It’s a space where students, developers, tech enthusiasts, and innovators across India come together to learn, share, and build — beyond textbooks and classroom boundaries.
 
-## Project info
+Founded by passionate students, the community exists to bridge the gap between education and real-world tech exposure, through:
 
-**URL**: https://lovable.dev/projects/7f5d24f8-1587-41c7-b6e4-46a58643a350
+Hackathons & Ideathons – Fueling problem-solving and creative thinking
 
-## How can I edit this code?
+Skill-building events – From coding to worshops to bootcamps
 
-There are several ways of editing your application.
+Knowledge sharing – Courses, internships, scholarships, and tech events curated 
 
-**Use Lovable**
+Campus Ambassador Program – Empowering college reps to lead locally and connect nationally
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7f5d24f8-1587-41c7-b6e4-46a58643a350) and start prompting.
+Collaborative Networking – Creating meaningful connections between peers and professionals
 
-Changes made via Lovable will be committed automatically to this repo.
+We don’t just post events.
+We build a platform where young minds can level up, teach each other, and grow together — no gatekeeping, no noise, no corporate blah-blah.
 
-**Use your preferred IDE**
+## Vision:
+To be India’s most authentic and impactful student-powered tech collective — by students, for students.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## In simple words:
+"White Devils is your tech circle that actually shares useful stuff — not just scams or fake job links."
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7f5d24f8-1587-41c7-b6e4-46a58643a350) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Whether you're a curious beginner or a hackathon hustler — if you're hungry to learn and grow in tech, there's a place for you here.
