@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
+import { ScrollArea } from "./ui/scroll-area";
 import { Star, User, Quote } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -137,35 +138,37 @@ const Reviews = () => {
                 </CardContent>
               </Card>
             ) : (
-              <div className="space-y-6">
-                {reviews.map((review) => (
-                  <Card key={review.id} className="border-primary/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-gradient-to-r from-primary/20 to-primary-glow/20 rounded-full">
-                          <User className="h-6 w-6 text-primary" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between mb-2">
-                            <div>
-                              <h4 className="font-semibold text-foreground">{review.name}</h4>
-                              <p className="text-sm text-muted-foreground">{review.college || "Student"}</p>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              {renderStars(review.rating)}
-                            </div>
+              <ScrollArea className="h-[600px] pr-4">
+                <div className="space-y-6">
+                  {reviews.map((review) => (
+                    <Card key={review.id} className="border-primary/20 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                      <CardContent className="p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="p-3 bg-gradient-to-r from-primary/20 to-primary-glow/20 rounded-full">
+                            <User className="h-6 w-6 text-primary" />
                           </div>
-                          <div className="relative">
-                            <Quote className="absolute -top-2 -left-2 h-6 w-6 text-primary/30" />
-                            <p className="text-muted-foreground pl-4 leading-relaxed">{review.review_text}</p>
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between mb-2">
+                              <div>
+                                <h4 className="font-semibold text-foreground">{review.name}</h4>
+                                <p className="text-sm text-muted-foreground">{review.college || "Student"}</p>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                {renderStars(review.rating)}
+                              </div>
+                            </div>
+                            <div className="relative">
+                              <Quote className="absolute -top-2 -left-2 h-6 w-6 text-primary/30" />
+                              <p className="text-muted-foreground pl-4 leading-relaxed">{review.review_text}</p>
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-3">{new Date(review.created_at).toLocaleDateString()}</p>
                           </div>
-                          <p className="text-xs text-muted-foreground mt-3">{new Date(review.created_at).toLocaleDateString()}</p>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </ScrollArea>
             )}
           </div>
 
