@@ -12,11 +12,11 @@ import { supabase } from "@/integrations/supabase/client";
 interface Review {
   id: string;
   name: string;
-  email: string;
   college: string;
   rating: number;
   review_text: string;
   created_at: string;
+  updated_at: string;
 }
 
 const Reviews = () => {
@@ -31,11 +31,11 @@ const Reviews = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Fetch reviews from Supabase
+  // Fetch reviews from Supabase (using secure view)
   const fetchReviews = async () => {
     try {
       const { data, error } = await supabase
-        .from('reviews')
+        .from('reviews_public')
         .select('*')
         .order('created_at', { ascending: false });
 
@@ -80,8 +80,8 @@ const Reviews = () => {
 
       if (error) throw error;
 
-      // Add new review to the top of the list
-      setReviews([data, ...reviews]);
+      // Refresh reviews to get the new one from the secure view
+      await fetchReviews();
       setNewReview({ name: "", email: "", college: "", review: "", rating: 5 });
       
       toast({

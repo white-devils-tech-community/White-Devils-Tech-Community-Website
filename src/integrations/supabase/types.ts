@@ -49,7 +49,36 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      reviews_public: {
+        Row: {
+          college: string | null
+          created_at: string | null
+          id: string | null
+          name: string | null
+          rating: number | null
+          review_text: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          college?: string | null
+          created_at?: string | null
+          id?: string | null
+          name?: string | null
+          rating?: number | null
+          review_text?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          college?: string | null
+          created_at?: string | null
+          id?: string | null
+          name?: string | null
+          rating?: number | null
+          review_text?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never
