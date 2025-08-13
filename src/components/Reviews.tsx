@@ -31,12 +31,12 @@ const Reviews = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Fetch reviews from Supabase (using secure view)
+  // Fetch reviews from Supabase (excluding sensitive email data)
   const fetchReviews = async () => {
     try {
       const { data, error } = await supabase
-        .from('reviews_public')
-        .select('*')
+        .from('reviews')
+        .select('id, name, college, rating, review_text, created_at, updated_at')
         .order('created_at', { ascending: false });
 
       if (error) throw error;
