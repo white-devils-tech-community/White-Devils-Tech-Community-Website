@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,13 +43,13 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ) : (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-foreground hover:text-primary transition-colors duration-300"
                 >
                   {item.name}
-                </a>
+                </Link>
               )
             ))}
           </div>
@@ -81,14 +82,14 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 ) : (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className="text-foreground hover:text-primary transition-colors duration-300 px-4 py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 )
               ))}
             </div>
